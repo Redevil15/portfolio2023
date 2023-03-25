@@ -18,6 +18,8 @@ import {
     meta,
     starbucks,
     tesla,
+    fiverr,
+    ids,
     shopify,
     carrent,
     jobit,
@@ -107,19 +109,15 @@ import {
     {
       name: "figma",
       icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
-    },
+    }
   ];
   
   const experiences = [
     {
       title: "Fullstack Developer",
       company_name: "Fiverr",
-      icon: starbucks,
-      iconBg: "#383E56",
+      icon: fiverr,
+      iconBg: "#fff",
       date: "August 2020 - February 2023",
       points: [
         "Developing and maintaining web applications using React.js and other related technologies.",
@@ -133,7 +131,7 @@ import {
     {
       title: "Senior Frontend Developer",
       company_name: "Jalisoft",
-      icon: tesla,
+      icon: '',
       iconBg: "#E6DEDD",
       date: "December 2022 - Feb 2023",
       points: [
@@ -146,8 +144,8 @@ import {
     {
       title: "Sr. System Engineer",
       company_name: "IDS Comercial",
-      icon: shopify,
-      iconBg: "#383E56",
+      icon: ids,
+      iconBg: "#86b81d",
       date: "February 2023 - Current",
       points: [
         "Developing and maintaining web applications using React.js and other related technologies.",
