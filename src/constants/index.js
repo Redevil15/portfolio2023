@@ -21,10 +21,12 @@ import {
     fiverr,
     ids,
     shopify,
-    carrent,
+    bdevmedia,
     jobit,
     tripguide,
     threejs,
+    bcoffe,
+    blyrics,
   } from "../assets";
   
   export const navLinks = [
@@ -185,30 +187,35 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "B Dev Media",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "Web app based on youtube, everyone can just click and watch whatever they want!",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
           name: "tailwind",
           color: "pink-text-gradient",
         },
+        {
+          name: "materialUi",
+          color: "green-text-gradient"
+        },
+        {
+          name: "restapi",
+          color: 'blue-text-gradient'
+        },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      image: bdevmedia,
+      source_code_link: "https://github.com/Redevil15/BDevMedia",
+      source_project_link: 'https://bdevmedia.netlify.app/'
     },
     {
-      name: "Job IT",
+      name: "Lyriks",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "Web application that enable users to listen all kind of songs, it's like spotify but for free!.",
       tags: [
         {
           name: "react",
@@ -219,33 +226,35 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "tailwind",
           color: "pink-text-gradient",
         },
+        {
+          name: "materialUi",
+          color: "green-text-gradient"
+        },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      image: blyrics,
+      source_code_link: "https://github.com/Redevil15/LyriksProject",
+      source_project_link: 'https://bff-lyricsproyect.netlify.app/'
     },
     {
-      name: "Trip Guide",
+      name: "Coffe Blog",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "A web blog where the users can check news and history about coffe, as well as see recipes and ways of preparation .",
       tags: [
         {
-          name: "nextjs",
+          name: "Javascript",
           color: "blue-text-gradient",
-        },
-        {
-          name: "supabase",
-          color: "green-text-gradient",
         },
         {
           name: "css",
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: bcoffe,
+      source_code_link: "https://github.com/Redevil15",
+      source_project_link: 'https://proyecto02blogdecafe-bfigueroa.netlify.app/'
     },
   ];
   
