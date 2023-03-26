@@ -5,9 +5,15 @@ import {styles} from '../styles'
 import {SectionWrapper} from '../hoc'
 import { EarthCanvas } from './canvas'
 import {slideIn} from '../utils/motion'
+import { useSnackbar } from 'notistack'
+
+//template_sloxjak
+//service_e65k0b6
+//4Ffs9gttQERS3Z8YI
 
 const Contact = () => {
   const formRef = useRef();
+  const { enqueueSnackbar } = useSnackbar();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -15,11 +21,42 @@ const Contact = () => {
   })
   const [loading, setloading] = useState(false)
 
-  const handleChange = (e) => {}
-  const handleSubmit = (e) => {}
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name] : value})
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setloading(true)
+    emailjs.send(
+      'service_e65k0b6', 
+      'template_sloxjak', 
+      {
+        from_name: form.name,
+        to_name: 'Brandon',
+        from_email: form.email,
+        to_email: 'brandonf2345@gmail.com',
+        message: form.message,
+      }, 
+      '4Ffs9gttQERS3Z8YI')
+      .then(() => {
+        setloading(false)
+        enqueueSnackbar('Thank you, I will get back to you as soon as possible', {variant: 'success'})
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        })
+      }, (error) => {
+        setloading(false)
+        console.log(error)
+        enqueueSnackbar('Something went wrong', { variant: 'error' });
+      })
+  }
 
   return (
-    <div className='xl:mt-12 xl:flex-row flex-column-reverse flex gap-10 overflow-hidden'>
+    <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse  gap-10 overflow-hidden`}>
       <motion.div
         variants={slideIn('left', "tween", 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
@@ -73,8 +110,6 @@ const Contact = () => {
               rows='7'
               name='message'
               value={form.message}
-              /* onFocus="this.placeholder = ''"
-              onBlur="this.placeholder = 'What's your name'" */
               onChange={handleChange}
               placeholder="What do you whant to say"
               className='bg-tertiary p-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
