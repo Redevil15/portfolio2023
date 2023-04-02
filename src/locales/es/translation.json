@@ -1,6 +1,9 @@
 {
-    "About": {
-        "Hi": "Hola",
-        "Im": "soy"
-    }
+    "Hi": "Hola",
+    "Im": "soy",
+    "Me": "Desarrollo increibles aplicaciones web, interfaces",
+    "Me2": "de usuario y vistas 3D",
+    "Introduction": "Introduccion",
+    "Overview": "Resumen.",
+    "OverviewDescription": "Soy un desarrollador habil de software con experiencia en TypeScript y JavaScript.Especializado en marcos como React, Node.js y Three.js. Aprendo rápidamente y colaboro estrechamente con los clientes para crear soluciones eficientes, escalables y fáciles de usar que resuelvan problemas del mundo real. ¡Trabajemos juntos para dar vida a tus ideas!"
 }
