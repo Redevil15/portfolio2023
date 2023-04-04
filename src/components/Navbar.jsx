@@ -37,29 +37,31 @@ const Navbar = () => {
             <span className="sm: block-hidden">| Dev</span>
           </p>
         </Link>
-        <ul>
-          <img
-            className="w-9 h-9 object-cover cursor-pointer rounded-full bg-transparent border-none"
-            src={language === "en" ? en : es}
-            alt={language}
-            onClick={() =>
-              handleLanguageChange(language === "en" ? "es" : "en")
-            }
-          />
-        </ul>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((link) => (
-            <li
-              key={link.id}
-              className={`${
-                active === link.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(link.title)}
-            >
-              <a href={`#${link.id}`}>{link.title}</a>
-            </li>
-          ))}
-        </ul>
+        <div className="flex items-center gap-10 justify-end">
+          <ul className="list-none hidden  sm:flex flex-row gap-10">
+            {navLinks.map((link) => (
+              <li
+                key={link.id}
+                className={`${
+                  active === link.title ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                onClick={() => setActive(link.title)}
+              >
+                <a href={`#${link.id}`}>{link.title}</a>
+              </li>
+            ))}
+          </ul>
+          <ul className="hidden sm:flex items-end ">
+            <img
+              className="w-8 h-8 object-cover cursor-pointer rounded-full bg-transparent border-none"
+              src={language === "en" ? en : es}
+              alt={language}
+              onClick={() =>
+                handleLanguageChange(language === "en" ? "es" : "en")
+              }
+            />
+          </ul>
+        </div>
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
@@ -67,6 +69,7 @@ const Navbar = () => {
             className="w-[28px] h-[28px] object-contain cursor-pointer"
             onClick={() => setToggle(!toggle)}
           />
+
           <div
             className={`${
               !toggle ? "hidden" : "flex"
@@ -87,6 +90,14 @@ const Navbar = () => {
                   <a href={`#${link.id}`}>{link.title}</a>
                 </li>
               ))}
+              <img
+                className="w-9 h-9 object-cover cursor-pointer rounded-full bg-transparent border-none"
+                src={language === "en" ? en : es}
+                alt={language}
+                onClick={() =>
+                  handleLanguageChange(language === "en" ? "es" : "en")
+                }
+              />
             </ul>
           </div>
         </div>

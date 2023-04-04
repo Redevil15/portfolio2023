@@ -16,7 +16,7 @@ export function useTypingEffect(words, interKeyStrokeDurationInMs) {
       if (currentPositionRef.current === words[currentWordIndex].length) {
         setIsDeleting(true);
         isDeletingRef.current = true;
-      } else if (currentPositionRef.current === 0) {
+      } else if (currentPositionRef.current === 1) {
         setIsDeleting(false);
         isDeletingRef.current = false;
         setCurrentWordIndex((index) => (index + 1) % words.length);
