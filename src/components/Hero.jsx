@@ -2,12 +2,13 @@ import { motion } from "framer-motion";
 import { useTypingEffect } from "../utils/typing-effect";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
   const words = ["Brandon", "Frontend Dev", "Backend Dev"];
   const interKeyStrokeDurationInMs = 300;
   const text = useTypingEffect(words, interKeyStrokeDurationInMs);
-
+  const { t } = useTranslation();
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
@@ -19,11 +20,12 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915eff]">{text}</span>
+            {t("Hi")}, {t("Im")} <br />
+            <span className="text-[#915eff]">{text}</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop amazing web apps, user <br className="sm:block hidden" />
-            interfaces and 3D visuals.
+            {t("Me")} <br className="sm:block hidden" />
+            {t("Me2")}
           </p>
         </div>
       </div>
